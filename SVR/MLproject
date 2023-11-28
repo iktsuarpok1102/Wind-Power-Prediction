@@ -1,0 +1,11 @@
+name: SVR
+
+conda_env: conda.yaml
+# The following line assumes you want to use virtualenv as an alternative environment
+virtualenv: python_env.yaml
+
+entry_points:
+  main:
+    parameters:
+      param1: {type: float, default: 0.1}
+    command: "python svr.py --param1 {param1}"
